@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "NoteScribe",
+    "description": "A handy notes-keeping extension for browser, make notes while browsing.",
+    "version": "1.0",
+    "permissions": ["storage", "activeTab"],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "logo16.png",
+        "48": "logo48.png",
+        "128": "logo128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "logo16.png",
+      "48": "logo48.png",
+      "128": "logo128.png"
+    },
+    "browser_action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": ["index.html"]
+  }
+  

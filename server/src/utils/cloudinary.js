@@ -15,10 +15,12 @@ const uploadOnCloudinary = async function (localFilePath) {
     });
 
     // file is uploaded successfully
-    console.log("The file is uploaded to the cloundinary ", response.url);
+    fs.unlinkSync(localFilePath);
     return response;
   } catch (error) {
     fs.unlinkSync(localFilePath);
     return null;
   }
 };
+
+export { uploadOnCloudinary };
